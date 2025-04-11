@@ -379,6 +379,9 @@
       /* top: 55%; */
       left: 90%;
     }
+    .reviews__item:last-child{
+      display: none;
+    } 
     .remuneration{
       display: block;
       margin-top: 56px;
