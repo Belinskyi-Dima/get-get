@@ -1,0 +1,127 @@
+/* Блок секції */
+.faq {
+    /* padding: 50px 20px; */
+    /* background: linear-gradient(90deg, #eaf8ff 0%, #d9f3ff 100%); */
+    text-align: center;
+    border-radius: 15px;
+    color: var(--color-primery);
+    padding-bottom: 96px;
+    /* position: relative; */
+  }
+  
+  .faq__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    /* color: #6a0dad; */
+    /* color: var(--color-primery); */
+    margin-bottom: 10px;
+  }
+  
+  .faq__title {
+    font-size: 28px;
+    font-weight: bold;
+    /* color: #000; */
+    /* color: var(--color-primery); */
+    margin-bottom: 30px;
+  }
+  
+  /* Список карток */
+  .faq__list {
+    display: flex; /* Включаємо Flexbox */
+  flex-direction: column; /* Розташовуємо елементи вертикально */
+  justify-content: center; /* Центруємо елементи по вертикалі */
+  align-items: center; /* Центруємо елементи по горизонталі */
+    /* display: flex; */
+    
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  /* Картка */
+  .faq__item {
+    /* align-items: center; */
+    max-width: 740px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* .faq__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  } */
+  
+  /* Питання */
+  .faq__question {
+    font-size: 22px;
+    font-weight: bold;
+    /* color: #000; */
+    margin-bottom: 10px;
+  }
+  
+  /* Відповідь */
+  .faq__answer {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Кнопка */
+  .faq__button {
+    background-color: transparent;
+    color: var(--color-primery);
+    border: 1px solid var(--color-dark);
+    transition: all 0.3s ease;
+   /* 
+    border: none;
+    
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; */
+  }
+  
+  .faq__button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Легкий напівпрозорий чорний фон */
+    color: #000; /* Текст залишається чорним */
+    border-color: #000;
+  }
+
+  .gradient {
+    position: relative;
+    background: radial-gradient(circle at 25% 70%, #D3FF6A, transparent 20%);
+  }
+
+  .gradient::before,
+  .gradient::after {
+    content: '';
+    position: absolute;
+    z-index: -1; 
+    filter: blur(90px); /* Розмиття */
+    transform: translate(-50%, -50%);
+  }
+  
+  .gradient::before {
+    width: 150px;
+    height: 300px; /* Прямокутна форма */
+    background: #7AFBE8;
+    top: 55%;
+    left: 50%;
+  }
+  
+  .gradient::after {
+      width: 120px;
+      height: 300px; /* Прямокутна форма */
+    background: #D3FF6A;
+
+    top: 65%;
+    left: 80%;
+  }

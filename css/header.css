@@ -1,0 +1,105 @@
+/* .header_logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  } */
+  /* .logo {
+
+  }
+  .header_logo p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  } */
+  .header {
+    padding-top: 48px;
+    /* color: var(--color-dark); */
+    /* margin-bottom: 100px; */
+  }
+  .header_logo {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .logo P{
+    /* margin-bottom: 8px; */
+  }
+  .logo__text {
+    color: var(--color-primery);
+    font-size: 22px;
+    font-weight: 600;
+  }
+  /* Навігація */
+  .header_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header__menu {
+    padding-block: 28px;
+    
+  }
+  .header__menu-list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    font-weight: 600;
+    background: var(--bd-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    cursor: pointer;
+  }
+  .header__menu-link {
+    padding: 16px;
+    border-radius: var(--border-radius);
+    color: var(--color-dark);
+    border: 3px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .header__menu-link:focus {
+    background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%);
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+  .header__menu-link:active {
+    background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%);
+    opacity: 0.9;
+    transform: scale(0.95);
+
+  }
+  .header__menu-link:hover {
+    border-color: #8FE9E4;
+    /* border: 3px solid #8FE9E4; */
+    
+  }
+    .is-current {
+        /* background: #8FE9E4; */
+        background: linear-gradient(180deg, #ADF3EC 0%, #79ECE1 100%);
+      
+        opacity: 0.9;
+        transform: scale(0.95);
+    }
+
+
+ 
+    .menu-button {
+        background: #fff;
+        padding: 22px 32px;
+        border-radius: var(--border-radius);
+        z-index: 1;
+      
+        display: none;
+        flex-direction: column;
+      
+        justify-content: center;
+        align-items: center;
+      
+        box-shadow: var(--box-shadow);
+      }
+      .line {
+        width: 30px;
+        height: 3px;
+        background-color: #252432;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+      }
