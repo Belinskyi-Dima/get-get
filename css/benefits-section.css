@@ -53,7 +53,7 @@
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 5px;
-    color: #000;
+    color: var(--color-primery);
   }
   
   /* Опис */

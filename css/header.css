@@ -73,10 +73,11 @@
     
   }
     .is-current {
-        /* background: #8FE9E4; */
-        background: linear-gradient(180deg, #ADF3EC 0%, #79ECE1 100%);
+      /* background: linear-gradient(180deg,rgba(137, 237, 227, 0.5), rgba(0, 176, 159, 0.5)); */
+      background: var(--gradient-collor);
+        /* background: linear-gradient(180deg, #ADF3EC 0%, #79ECE1 100%); */
       
-        opacity: 0.9;
+        /* opacity: 0.9; */
         transform: scale(0.95);
     }
 

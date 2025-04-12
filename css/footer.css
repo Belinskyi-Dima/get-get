@@ -9,7 +9,7 @@
   }
   .footer__wrapper {
     /* background: linear-gradient(90deg, #6a0dad 0%, #4a0072 100%); */
-    background: linear-gradient(180deg, #4a0072 0%,  #6a0dad 100%);
+    background: linear-gradient(180deg, #5C1E8E 0%,  #5D32F6 100%);
 
     border-radius: 20px 20px 0 0;
     position: relative;
@@ -24,7 +24,7 @@ left: 50%;
 transform: translateX(-50%);
 width: 113px;
 height: 113px;
-background-color: #4a0072;
+background-color: #5C1E8E;
 background-image: url('../images/hero/scan2.svg');
 background-repeat: no-repeat; /* Забороняємо повторення зображення */
 background-position: center 9px; /* Центруємо зображення */
@@ -65,7 +65,7 @@ align-items: center;  */
   .footer__img-wrapper {
     position: absolute;
     top: -50px;
-    left: 0;
+    left: 42px;
   }
   .footer__content-wrapper{
     max-width: 650px;

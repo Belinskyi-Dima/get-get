@@ -6,17 +6,29 @@
     /* color: var(); */
     
   }
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--color-primery);
+    /* color: #252432; */
+  }
   .hero__subtitle {
-
+    color: #1F2024;
   }
   .hero-container {
     position: relative;
-    background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%);
+    /* background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%); */
+    /* background: linear-gradient(to right, rgba(137, 237, 227, 0.5),rgba(0, 176, 159, 0.5)); */
+
+
+    /* background: linear-gradient( rgba(137, 237, 227, 0.5),rgba(0, 176, 159, 0.5)); */
+    background: var(--gradient-collor);
     border-radius: 16px;
-    padding: 40px 40px 40px 72px;
+    padding: 36px 40px 40px 72px;
     /* margin:  auto; */
     /* max-width: 1200px; */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 
     display: flex;
     justify-content: space-between;
@@ -40,7 +52,7 @@
     /* bottom: -180px; */
     
     /* background-color:  #79ECE1; */
-    background-color:  #98ebe2;
+    background-color:  rgba(121, 236, 225, 0.5);
    
   }
   /* .hero-container::before {
@@ -83,11 +95,12 @@
   }
   .hero__content-item {
   position: relative;
+  padding-left: 30px;
     
 
   }
   .hero__content-item strong {
-    padding-left: 30px;
+    /* padding-left: 30px; */
   }
   .hero__content-item span {
     font-weight: 400;
@@ -117,21 +130,24 @@
   .hero__image-container {
 
     position: absolute; 
-    top: 50%;
+    top: 49%;
     right: 40px;
     transform: translateY(-50%);
     z-index: 1;
   }
   .hero__image-container::before {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 0 H40 V40 Q20 20 0 40 Z" fill="%2398ebe2"/></svg>');
+    /* content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40 40"><path d="M0 0 H40 V40 Q20 20 0 40 Z" fill="%2398ebe2"/></svg>'); */
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40 40"><path d="M0 0 H40 V40 Q20 20 0 40 Z" fill="%23a5f2eb"/></svg>');
+    
+    /* rgba(0, 176, 159, 0.5) */
     position: absolute;
-    bottom: 62px;
+    bottom: 56px;
     /* bottom: -18px;  */
     /* right:  0px; */
     z-index: -1;
-    left: 91px;
-    width: 40px;
-    height: 40px;
+    left: 86px;
+    width: 60px;
+    height: 60px;
     rotate: 43deg;
 
   }
