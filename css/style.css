@@ -483,6 +483,9 @@
       width: 100%;
       padding-inline: 0;
     }
+    .footer__wrapper {
+      padding-bottom: 15px;
+    }
     .footer__scan-wrapper{
       left:18%;
     }
