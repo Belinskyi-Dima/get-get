@@ -23,7 +23,10 @@
     /* max-width: 1200px; */
     margin: 0 auto;
     padding: 40px 20px;
-    text-align: center;
+    /* text-align: center; */
+    /* display: flex;
+    flex-direction: column;
+    gap: 24px;  */
   }
   
   /* .carousel-container h2 {
@@ -31,13 +34,18 @@
     margin-bottom: 20px;
     color: #000;
   } */
-  
+  /* #slider-1,
+#slider-2 {
+  margin-bottom: 24px;
+} */
   .carousel {
     display: flex;
     gap: 20px;
     animation: scroll-carousel 10s linear infinite paused; 
   }
-  
+  .carousel:not(:last-child) {
+    /* margin-bottom: 24px; */
+  }
   .carousel-item {
     flex: 0 0 auto;
     width: 150px;
@@ -55,7 +63,12 @@
     max-height: 100%;
     object-fit: contain;
   }
-  
+  .slider:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .slider:not(:last-child) {
+    /* margin-bottom: 24px; */
+  }
   /* /* #slider-1 .carousel {
     animation-name: scroll-carousel-left; 
   } */

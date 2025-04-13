@@ -97,6 +97,7 @@
     font-size: 20px;
     font-weight: 600;
     color: var(--color-dark);
+    line-height: 1.1;
     /* font-size: 20px;
     font-weight: bold; */
     /* font-weight: 600;
@@ -105,7 +106,8 @@
   }
   
   .step__description {
-    font-size: 16px;
+
+    line-height: 1.1;
     color: var(--color-primery);
   }
   
@@ -130,7 +132,7 @@
     background-color: #5C1E8E;
     color: #fff;
     border: none;
-    border-radius: 25px;
+    border-radius: 999px;
     padding: 21px 107px;
     /* font-size: 16px; */
     cursor: pointer;

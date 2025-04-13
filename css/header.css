@@ -49,10 +49,12 @@
     cursor: pointer;
   }
   .header__menu-link {
+    position: relative;
     padding: 16px;
     border-radius: var(--border-radius);
     color: var(--color-dark);
-    border: 3px solid transparent;
+    /* border: 2px solid transparent; */
+    /* border: 2px; */
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
@@ -63,25 +65,61 @@
   }
   .header__menu-link:active {
     background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%);
+    
     opacity: 0.9;
     transform: scale(0.95);
 
   }
-  .header__menu-link:hover {
-    border-color: #8FE9E4;
+  /* .header__menu-link:hover { */
+    /* border-color: #8FE9E4; */
+
+    /* border-color: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%); */
+    /* border-image: linear-gradient(to right, #8ED5CE, #4ED3BD) 1; */
+    /* border-radius: var(--border-radius); */
+
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
     /* border: 3px solid #8FE9E4; */
-    
+ 
+   
+  /* } */
+  .header__menu-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    padding: 2px;
+    background: linear-gradient(to bottom, #8ED5CE, #4ED3BD);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .header__menu-link:hover::before {
+    opacity: 1;
   }
     .is-current {
       /* background: linear-gradient(180deg,rgba(137, 237, 227, 0.5), rgba(0, 176, 159, 0.5)); */
       background: var(--gradient-collor);
-        /* background: linear-gradient(180deg, #ADF3EC 0%, #79ECE1 100%); */
+      /* background: linear-gradient(180deg,rgba(137, 237, 227, 0.5), rgba(0, 176, 159, 0.5)); */
       
+        /* background: linear-gradient(180deg, #ADF3EC 0%, #79ECE1 100%); */
+      /* border: none; */
+
         /* opacity: 0.9; */
+        /* border-color:  var(--gradient-collor); */
         transform: scale(0.95);
+        /* border: 2px solid transparent; / */
+        /* padding-top:  18px;
+        padding-bottom: 18px; */
     }
 
-
+    .header__menu-link.is-current:hover::before {
+      opacity: 0;
+    }
  
     .menu-button {
         background: #fff;

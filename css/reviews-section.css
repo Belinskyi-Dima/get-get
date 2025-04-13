@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    padding-bottom: 10px;
   }
   
   /* Окремий відгук */
@@ -28,6 +29,7 @@
     padding: 20px;
     width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 8px rgba(31, 32, 36, 0.1); */
     text-align: left;
   }
   

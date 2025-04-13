@@ -1,7 +1,20 @@
 
-  
+const body = document.body;
+const html = document.documentElement;
+
+const setGradientHeight = () => {
+  const pageHeight = Math.max(
+    body.scrollHeight, html.scrollHeight,
+    body.offsetHeight, html.offsetHeight,
+    body.clientHeight, html.clientHeight
+  );
+
+  document.body.style.height = `${pageHeight}px`;
+};
+
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll(".translatey--section");
+      const sections2 = document.querySelectorAll(".fade-in-up");
   
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -17,9 +30,32 @@
         observer.observe(section);
       });
 
-
+      sections2.forEach(section => {
+        observer.observe(section);
+      });
 
     });
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   const sections = document.querySelectorAll(".fade-in-up");
+  
+    //   const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //       if (entry.isIntersecting) {
+    //         entry.target.classList.add("visible");
+    //       }
+    //     });
+    //   }, {
+    //     threshold: 0.2 // можна змінити (напр. 0.1 або 0.5)
+    //   });
+  
+    //   sections.forEach(section => {
+    //     observer.observe(section);
+    //   });
+
+
+
+    // });
 
     document.addEventListener("DOMContentLoaded", function () {
 
