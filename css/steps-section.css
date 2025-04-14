@@ -44,7 +44,7 @@
     box-shadow: 0 4px 10px #87CEC7;
     /* transition: transform 0.3s ease; */
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     column-gap: 16px;
 
   }
@@ -73,8 +73,9 @@
   .step__content{
     text-align: left;
     /* display: flex; */
+    /* align-items: center; */
     /* flex-direction: column; */
-    /* justify-content: flex-start; */
+    /* justify-content: start; */
     /* justify-content: end; */
     /* align-items: start; */
   }
