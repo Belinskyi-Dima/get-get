@@ -231,14 +231,24 @@ let scrollDirection = 0;
 
   // Клонування вмісту для нескінченного ефекту
 
+  // function cloneSliderItems(slider) {
+  //   const items = Array.from(slider.children);
+  //   items.forEach(item => {
+  //     const clone = item.cloneNode(true);
+  //     slider.appendChild(clone);
+  //   });
+  // }
+  
   function cloneSliderItems(slider) {
     const items = Array.from(slider.children);
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      slider.appendChild(clone);
-    });
+    for (let i = 0; i < 3; i++) { // клонувати 3 рази
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        slider.appendChild(clone);
+      });
+    }
   }
-  
+
   sliders.forEach(slider => {
     cloneSliderItems(slider);
   });
