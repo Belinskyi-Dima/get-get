@@ -10,8 +10,8 @@
     text-align: center;
     border-radius: 15px;
     color: var(--color-primery);
-    padding-bottom: 96px;
-    margin-bottom: 96px;
+    padding-bottom: 156px;
+    /* margin-bottom: 96px; */
     /* position: relative; */
   }
   .faq.section--padding-top {
@@ -106,7 +106,7 @@
 
   .gradient {
     position: relative;
-    background: radial-gradient(circle at 25% 70%, #D3FF6A, transparent 20%);
+    background: radial-gradient(circle at 25% 55%, #D3FF6A, transparent 20%);
         /* padding-bottom: 86px;
     margin-bottom: 96px; */
   }
