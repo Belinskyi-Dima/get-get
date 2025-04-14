@@ -561,6 +561,10 @@
       top: 20%;
       left: 10%;
     }
+    .faq {
+      padding-bottom: 96px;
+    }
+
     .faq__question {
       font-size: 18px;
     }
