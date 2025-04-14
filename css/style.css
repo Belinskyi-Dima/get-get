@@ -312,7 +312,7 @@
     .hero__image-container::before {
       bottom: 1px;
       left: 71px;
-    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='30' viewBox='0 0 20 30'><path d='M0 0 H40 C35 0, 0 0, 0 20 Z' fill='%2368D3CC'/></svg>");
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='30' viewBox='0 0 20 30'><path d='M0 0 H40 C35 0, 0 0, 0 20 Z' fill='%2377D6CE'/></svg>");
     rotate: 90deg;
     width: 20px;
     height: 30px;
