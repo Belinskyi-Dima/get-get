@@ -14,7 +14,9 @@
     margin-bottom: 96px;
     /* position: relative; */
   }
-  
+  .faq.section--padding-top {
+    padding-top: 86px;
+  }
   .faq__subtitle {
     font-size: 16px;
     font-weight: bold;
@@ -105,6 +107,8 @@
   .gradient {
     position: relative;
     background: radial-gradient(circle at 25% 70%, #D3FF6A, transparent 20%);
+        /* padding-bottom: 86px;
+    margin-bottom: 96px; */
   }
 
   .gradient::before,
