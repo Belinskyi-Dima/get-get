@@ -110,8 +110,9 @@
           rgba(174, 246, 240, 0.2)
         ); */
         /* background:linear-gradient(to bottom,rgba(231, 247, 250, 0.2), rgba(174, 246, 240, 0.2)); */
-        background-image: linear-gradient(to bottom, #e7f7fa, #d9f7fa, #cbf7f9, #bcf6f5, #aef6f0);
-
+        
+        /* background-image: linear-gradient(to bottom, #e7f7fa, #d9f7fa, #cbf7f9, #bcf6f5, #aef6f0); */
+        background-image: linear-gradient(175deg,rgba(231, 247, 250, 1) 0%, rgba(174, 246, 240, 0.2) 100%);
         background-repeat: no-repeat;
         background-size: cover; /* або '100% 100%' для жорсткого покриття */
         background-attachment: fixed; /* необов'язково, але дає ефект "залипання" */
@@ -500,6 +501,9 @@
     width: 86px;
     height: 46px;
   }
+  .slider:not(:last-child) {
+    margin-bottom: 16px;
+}
   .step__content {
     display: flex;
     flex-direction: column;
