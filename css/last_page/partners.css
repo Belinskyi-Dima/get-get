@@ -1,0 +1,91 @@
+/* === Partners grid === */
+.partners{
+  --card-w:262px;
+  --card-h:140px;
+  --partners-radius:14px;
+  --radius: 8px 
+}
+
+.partners{
+  /* padding:36px 16px 28px; */
+  /* background:
+    radial-gradient(1200px 420px at 50% -200px, #eaf6ff 0%, transparent 60%),
+    #f2f9fd; */
+}
+/* .partners__inner{ max-width:1100px; margin:0 auto; } */
+.partners-title { text-align:center; margin:0 0 16px; }
+
+/* сітка з фіксованою шириною елементів, центрована */
+.partners__list{
+  list-style:none; margin:0; padding:0;
+  display:grid;
+  row-gap: 16px;
+  column-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-w), var(--card-w)));
+  justify-content:center; /* центруємо доріжки */
+}
+
+/* картка */
+.partners__item{
+  width:var(--card-w);
+  height: var(--card-h);
+  /* background:#fff; */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:var(--radius);
+  /* box-shadow:var(--box-shadow); */
+    box-shadow: 0 6px 22px rgba(2,6,23,.08);
+  display:grid; 
+  place-items:center;
+  padding:18px;                /* щоб логотип не прилипав до країв */
+}
+
+/* логотип усередині */
+/* .partners__item img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  display:block;
+} */
+.partners__logo{
+  max-width: 164px;
+  max-height: 44px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+/* мобілка: 2 колонки 171×91 */
+/* @media (max-width:640px){ */
+  /* :root{
+    --card-w:171px;
+    --card-h:91px;
+     */
+  /* } */
+    /* .partners__item{
+    width: 171px;
+    height: 91px;*/
+     /* }  */
+@media (max-width:640px){
+  .partners{
+    --card-w:171px;
+    --card-h:91px;
+  }
+  .partners__list{
+    /* grid-template-columns: repeat(2, var(--card-w)); */
+      grid-template-columns: repeat(2, minmax(130px,171px));
+    justify-content:center;
+    gap: 16px 8px;
+  }
+  /* .partners__item{ padding:10px; } */
+   .partners__item{
+    height: var(--card-h);
+    width: 100%;
+    padding: 12px;
+  }
+
+.partners__logo{
+    max-width: 100px;
+    max-height: 40px;
+  }
+
+}

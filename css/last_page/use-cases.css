@@ -1,0 +1,111 @@
+/* ===== Use-cases ===== */
+.use-cases{
+  /* локальні змінні секції */
+  --card-max-w: 357px;   /* desktop max width */
+  --card-max-h: 400px;   
+  --card-min-h: 353px;   /* щоб не були «пласкими» */
+  --radius: 16px;
+
+  /* padding: 36px 16px 28px; */
+
+}
+
+
+.use-cases__title {
+  margin-bottom: 16px;
+}
+/* сітка: адаптивна кількість колонок, центруємо */
+.use-cases__list{
+  list-style:none; margin:0 auto; padding:0;
+  display:grid;
+  gap: 24px;
+  /* grid-template-columns: repeat(3, minmax(280px, var(--card-max-w))); */
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   grid-auto-rows: minmax(var(--card-min-h), auto);
+  justify-content:center;
+  align-items: stretch;
+}
+
+/* елемент списку під ширину треку */
+.use-cases__item{
+  width:100%;
+  max-width:var(--card-max-w);
+  justify-self:center;
+}
+
+/* картка */
+.case-card{
+  height:100%;
+  min-height:var(--card-min-h);
+  max-height:var(--card-max-h);
+  background:#fff;
+  /* border:1px solid #e7eef6; */
+  border-radius:var(--radius);
+  box-shadow:0 8px 26px rgba(2,6,23,.08);
+  padding:24px 20px;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* іконка + тексти */
+.case-card__icon{
+  width:64px; 
+  height:64px; 
+
+  margin:0 auto;
+  margin-bottom: 10px;
+}
+.case-card__title{ 
+  font-size:22px; 
+  margin-bottom: 8px; 
+}
+.case-card__text{ 
+  color:var(--color-primery); 
+  margin:0 0 10px; 
+  line-height:1.1;
+ }
+
+/* теги */
+.case-card__tags{
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:8px;
+  justify-content:center; 
+  /* margin-top:auto; */
+}
+.tag{
+  font-size:14px; 
+  line-height:1;
+  padding:8px 10px;
+   border-radius:60px;
+  /* background:#f3f0ff; color:#5b43ff; border:1px solid #ebe7ff; */
+      background:linear-gradient(270deg,
+      rgba(123, 97, 255, .20) 0%,
+      rgba(123, 97, 255, .10) 55%,
+      rgba(123, 97, 255, .03) 100%
+    ),
+    #fff;
+}
+
+/* ===== Mobile (≤640px): колонкою, центр, інші габарити ===== */
+/* @media (max-width:960px){
+
+} */
+@media (max-width:960px){
+  .use-cases{
+    --card-max-w: 350px;    /* мобільний максимум по ширині */
+    --card-min-h: 257px;    /* НЕ менше 257px */
+    --card-max-h: 355px;    /* можна лишити обмеження, або зняти, якщо треба */
+  }
+  .use-cases__list{
+    grid-template-columns: 1fr; /* один стовпчик */
+  }
+  .use-cases__item{
+
+    max-width: var(--card-max-w);
+  }
+  .case-card {
+    padding-inline: 16px;
+  }
+}

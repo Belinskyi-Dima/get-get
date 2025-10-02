@@ -1,0 +1,15 @@
+.last-page__footer {
+    /* padding-top: 63px; */
+}
+@media (max-width: 1160px) {
+    
+   .last-page__footer .hero-buttons a:last-child {
+    display: block;
+    
+   }
+   .last-page__footer .footer__btn-wrapper {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+   }
+}

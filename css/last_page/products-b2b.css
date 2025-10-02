@@ -1,0 +1,99 @@
+/* ===== Products B2B ===== */
+/* :root{ */
+  /* --card-w: 358px; */
+  /* --card-h: 259px; */
+  /* --radius: 16px; */
+  /* --ink: #0f172a; */
+  /* --muted:#475569; */
+  /* --shadow: 0 8px 28px rgba(2,6,23,.06); */
+/* } */
+
+.products-b2b{
+  /* padding: 40px 16px 32px; */
+  /* background:
+    radial-gradient(1200px 420px at 50% -200px, #eaf6ff 0%, transparent 60%),
+    #f2f9fd; */
+  /* color: var(--ink); */
+}
+/* .products-b2b__inner{ max-width: 1100px; margin: 0 auto; } */
+
+.products-b2b__title{
+    /* text-align:center; */
+  /* 
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin: 0 0 18px; */
+}
+
+/* Контейнер з картками */
+.products-b2b__list{
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;                   /* відступи між картками */
+  justify-content:center;     /* центруємо ряд */
+}
+
+/* ---- елемент списку (контейнер ширини) ---- */
+.products-b2b__item{
+  flex: 1 1 358px;    /* базово 358px, може стискатися */
+  max-width: 358px;   /* не більше 358px */
+  display:flex;   
+              /* щоб всередині card розтягнулась на 100% */
+}
+
+/* ---- сама картка ---- */
+.product-card{
+  width:100%;
+  height: 259px;      /* 259px фіксована висота */
+  background:#fff;
+  border:1px solid #e7eef6;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  padding:36px 20px 24px;
+
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* контент картки */
+.product-card__title{
+  font-size: 28px;
+  /* margin:2px 0 8px; */
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+.product-card__text{
+  /* color:var(--muted); */
+  font-size: 16px;
+  margin:0;
+  line-height:1.2;
+}
+
+/* кнопка внизу */
+.product-card__btn{
+  /* margin-top:auto;     */
+  margin-top: 24px;
+  /* align-self:center;
+  min-width:317px;
+  height:44px;
+
+  border-radius:777px;
+  border: 1px solid #111;
+  background:#fff;
+  font-weight:700;
+ 
+  transition:transform .15s ease, background-color .15s ease;
+    color: var(--color-primery);  */
+}
+.product-card__btn:hover{ transform:translateY(-1px); background:#eceeee; }
+.product-card__btn:active{ transform:translateY(0);background:#e2e2e2; }
+
+/* мобілка — автоматично стає колонкою по центру завдяки flex-wrap;
+   додамо трохи повітря за потреби */
+@media (max-width:640px){
+  .products-b2b__list{ gap:14px; }
+}

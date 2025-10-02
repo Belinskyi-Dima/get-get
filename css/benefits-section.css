@@ -1,25 +1,20 @@
-/* Блок секції */
+
 .benefits {
-    /* padding: 50px 20px; */
-    /* background-color: #eaf8ff; */
-    /* text-align: left; */
+
     display: flex;
     justify-content: center;
-    /* margin: 0 auto; */
+ 
   }
   .benefits__wrapper{
     max-width: 977px;
   }
-  /* Заголовок секції */
+ 
   .benefits__title {
-    /* font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000; */
+
     text-align: center;
   }
   
-  /* Список переваг */
+ 
   .benefits__list {
     list-style: none;
     padding: 0;
@@ -29,28 +24,28 @@
     gap: 20px;
   }
   
-  /* Елемент списку */
+  
   .benefits__item {
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    /* line-height: 1.1; */
+ 
   }
   
-  /* Іконка */
+ 
   .benefits__icon {
     font-size: 20px;
     color: #79ece1;
     flex-shrink: 0;
   }
   
-  /* Контент елемента */
+ 
   .benefits__content {
     flex: 1;
     line-height: 1.1;
   }
   
-  /* Підзаголовок */
+ 
   .benefits__subtitle {
     font-size: 18px;
     font-weight: bold;
@@ -58,7 +53,7 @@
     color: var(--color-primery);
   }
   
-  /* Опис */
+ 
   .benefits__description {
     font-size: 16px;
     color: #555;

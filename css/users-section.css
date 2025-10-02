@@ -1,28 +1,22 @@
-/* Блок секції */
+
 .users {
-    /* padding: 50px 20px; */
-    /* background: linear-gradient(90deg, #eaf8ff 0%, #d9f3ff 100%); */
-    /* padding-top: 96px; */
+
     text-align: center;
-    /* border: 2px solid #79ece1; */
-    /* border-radius: 15px; */
-    /* background: radial-gradient(circle at 30% 60%, #7AFBE8, transparent 20%), */
-              /* radial-gradient(circle at 70% 60%, #D3FF6A, transparent 20%); */
-      /* overflow: hidden; */
+
       overflow-x: visible;
   }
   .users::before,
 .users::after {
   content: '';
   position: absolute;
-  z-index: -1; /* Відправляємо на задній план */
-  filter: blur(50px); /* Розмиття */
+  z-index: -1; 
+  filter: blur(50px); 
   transform: translate(-50%, -50%);
 }
 
 .users::before {
   width: 150px;
-  height: 300px; /* Прямокутна форма */
+  height: 300px; 
   background: #7AFBE8;
   top: 50%;
   left: 30%;
@@ -30,28 +24,24 @@
 
 .users::after {
     width: 150px;
-    height: 300px; /* Прямокутна форма */
+    height: 300px; 
   background: #D3FF6A;
   top: 55%;
   left: 70%;
 }
-  /* Заголовок */
+  
   .users__title {
-    /* font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #000; */
+
     font-weight: 600;
     font-size: 32px;
     margin-bottom: 16px;
   }
   
-  /* Бонуси */
+ 
   .users__bonus {
-    /* font-size: 32px; */
-    /* font-weight: 700; */
+    
     color: #6a0dad;
-    /* margin-bottom: 24px; */
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,25 +57,19 @@
     color: #7716C5;
   }
   
-  /* Аватари */
-  /* .users__avatars-wrapper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  } */
+
   .users__avatars {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
-     /* overflow: hidden; */
+    
     overflow-x: visible; 
-    /* justify-content: flex-start; */
+    
     
     align-items: center;
     gap: 10px;
-    /* flex-wrap: wrap; */
+   
    
     
     margin-bottom: 20px;
@@ -96,17 +80,7 @@
     overflow-x: visible; 
   }
   
-  .users__avatars {
-    /* width: 60px; */
-    /* height: 60px; */
-    /* border-radius: 50%; */
-    /* overflow: hidden; */
-    /* background-color: #fff; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  }
+
   .users__avatar {
     flex: 0 0 auto;
     overflow: hidden;
@@ -138,7 +112,7 @@
     object-fit: cover;
   }
   
-  /* Кнопка */
+ 
   .users__button {
     background-color: #6a0dad;
     color: #fff;
@@ -154,21 +128,13 @@
     background-color: #4a0072;
   }
   
-  /* Адаптивність */
+
   @media (max-width: 768px) {
     .users__avatars {
       gap: 5px;
     }
   
-    /* .users__avatar {
-      width: 50px;
-      height: 50px;
-    } */
-  
-    .users__button {
-      /* font-size: 14px; */
-      /* padding: 8px 16px; */
-    }
+
   }
   
   @media (max-width: 480px) {
@@ -176,8 +142,5 @@
       font-size: 18px;
     }
   
-    .users__avatar {
-      /* width: 40px;
-      height: 40px; */
-    }
+
   }

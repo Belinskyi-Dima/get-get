@@ -1,0 +1,33 @@
+.follow-as__section {
+    display: none;
+}
+.follow-as__section {
+
+}
+.follow-as__section {
+    margin-bottom: 96px;
+}
+.follow-as__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+.follow-as__img {
+    width: 60px;
+    height: 60px;
+}
+.follow-as__section h3 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+  @media (max-width: 760px) {
+.follow-as__section {
+    display: block;
+}
+.follow-as__section {
+    font-size: 14px;
+}
+
+  }

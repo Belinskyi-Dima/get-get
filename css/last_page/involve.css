@@ -1,0 +1,245 @@
+.involve{
+  /* --ink:#1F2024; */
+  --muted:#44515f;
+  /* --btn:#6B2DF2;                 */
+  --card-sh:0 14px 36px rgba(2,6,23,.10);
+  --radius:18px;
+}
+
+/* секція */
+.involve{
+  /* padding: 20px 16px 32px; */
+ 
+  /* color:var(--ink);
+   */
+   color: var(--color-title);
+   /* color: red; */
+}
+
+/* картка з двома фонами (декор) + градієнт */
+/* .involve__card{
+  max-width: 1100px;
+  margin:0 auto;
+  padding:72px 46px;
+  border-radius:20px;
+  box-shadow:var(--card-sh);
+  position:relative;
+  overflow:hidden;
+
+  background:
+    url("../../img/Involvement/involvement_1.png") left 10% bottom 45px / clamp(140px, 22vw, 220px) auto no-repeat,
+    url("../../img/Involvement/involvement_2.png") right 60% bottom 40%/ clamp(120px, 26vw, 220px) auto no-repeat,
+    linear-gradient( rgba(137, 237, 227, 0.5),rgba(0, 176, 159, 0.5));
+  
+  display:grid;
+
+  grid-template-columns: minmax(0, 480px) minmax(0, 450px);
+  gap: 16px;
+
+justify-content: space-between;
+} */
+.involve__card{
+  position: relative;
+  overflow: hidden;
+  /* лишаємо тільки градієнт у background */
+  background: linear-gradient(rgba(137,237,227,.5), rgba(0,176,159,.5));
+  /* ваш grid як був */
+  display: grid;
+  grid-template-columns: minmax(0, 480px) minmax(0, 480px);
+  gap: 16px;
+  padding: 46px 72px;
+  justify-content: space-between;
+  border-radius: 16px;
+  min-width: 0;
+  /* box-shadow:var(--card-sh); */
+}
+
+/* Ліва картинка */
+.involve__card::before{
+  content:"";
+  position:absolute;
+  left:6%;               /* як було у вас */
+  bottom:40px;
+  width:clamp(140px, 22vw, 350px);
+  aspect-ratio: 381 / 280; /* приблизне співвідношення сторін */
+  background: url("../../img/Involvement/involvement_1.png") center/contain no-repeat;
+  transform: rotate(-10deg);         /* <<< ПОВОРОТ */
+  transform-origin: 50% 50%;
+  pointer-events:none; user-select:none;
+}
+
+/* Права картинка */
+.involve__card::after{
+  content:"";
+  position:absolute;
+  right:50%;
+  bottom:23%;
+  width:clamp(120px, 26vw, 250px);
+  aspect-ratio: 344 / 311; /* приблизне співвідношення сторін */
+  background: url("../../img/Involvement/involvement_2.png") center/contain no-repeat;
+  transform: rotate(9deg);           /* <<< ПОВОРОТ */
+  transform-origin: 50% 50%;
+  pointer-events:none; user-select:none;
+}
+
+
+/* ліва колонка */
+.involve__copy {
+
+}
+.involve-title{
+
+  font-size: 38px;
+
+  margin-bottom: 8px;
+}
+.involve__lead{
+  line-height: 1.2;
+}
+.involve__lead:not(:last-child){
+  margin:0 0 16px;
+  /* color: var(--color-title); */
+  /* font-weight:600; */
+}
+.involve__desc{
+  /* margin:0; */
+  /* color:var(--muted); */
+  max-width:38ch;
+}
+
+/* форма */
+.involve__form{
+  /* background: rgba(255,255,255,.18); */
+  border-radius: 16px;
+  /* padding: 8px 8px 12px; */
+  display:grid;
+  /* gap:10px; */
+  column-gap: 8px;
+  row-gap: 16px;
+}
+
+.frow{
+  display:grid;
+  grid-template-columns: 84px 1fr;    /* лейбл ліворуч, інпут праворуч */
+  gap:8px;
+  
+
+  align-items:center;
+}
+.involve__form, .frow { min-width: 0; }
+.frow label{
+  font-size:16px;
+  color:var(--color-primery);
+}
+.frow input::placeholder {
+  color: #A2A8BC;
+  font-size: 16px;
+}
+.frow input{
+  height:56px;
+  border-radius:600px;
+  border:none;
+  background:#fff;
+  padding:0 14px;
+  outline:none;
+  /* box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); */
+}
+.frow input:focus{
+  box-shadow: inset 0 0 0 2px #8ED5CE;
+  
+}
+
+/* дії */
+.factions{
+  display:grid;
+  /* gap:6px; */
+  margin-top: 34px;
+  padding-left: 52px; 
+}
+.tiny{
+  display: none;
+
+}
+
+
+/* мобілка */
+
+/* за бажанням — інші кути/позиції на мобілці */
+@media (max-width:960px){
+ .involve__card {
+    grid-template-columns: 1fr;
+    /* justify-content: center;
+    align-items: center; */
+    /* justify-items: center; */
+      justify-items: stretch; 
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .involve__card::before{
+
+    display: none;
+  }
+  .involve__card::after{
+
+    display: none;
+  }
+  .involve-title{
+
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+  .factions{
+
+  margin-top: 24px;
+  padding-left: 0; 
+}
+.frow {
+  grid-template-columns: 1fr;
+}
+.frow label {
+  text-align: left;
+  font-size: 14px;
+}
+.factions .steps-button {
+  width: 100%;
+  display: block;
+  padding:16px 0 ;
+}
+.tiny{
+  display: block;
+  font-size:12px;
+  /* color:rgba(31,32,36,.75); */
+  margin:16px 0 0;
+}
+.frow input{
+  width: 100%;
+  box-sizing: border-box;   /* padding враховується всередину ширини */
+}
+}
+
+/* @media (max-width: 720px){
+  .involve__card{
+    grid-template-columns: 1fr;
+    padding:18px;
+    background:
+      url("../../img/Involvement/involvement_1.png") left 8px bottom -6px / clamp(120px, 36vw, 180px) auto no-repeat,
+      url("../../img/Involvement/involvement_2.png") right -10px bottom 12px / clamp(100px, 40vw, 160px) auto no-repeat,
+      linear-gradient(135deg, #CEF2E9 0%, #BEEAF8 100%);
+  }
+  .involve__desc{ max-width: none; }
+  .involve__form{ padding:8px; }
+  .frow{ grid-template-columns: 1fr; }
+  .factions{ padding-left: 0; }
+} */
+/* .btn{
+  height:44px;
+  border-radius:999px;
+  border:none;
+  background:var(--btn);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .15s ease, filter .15s ease;
+} */
+/* .btn:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+.btn:active{ transform: translateY(0); } */

@@ -10,6 +10,20 @@
 @import url(./faq-section.css);
 @import url(./footer.css);
 
+@import url(./last_page/hero-last.css);
+@import url(./last_page/what-is-it.css);
+@import url(./last_page/modal.css);
+@import url(./last_page/get-for-busines.css);
+@import url(./last_page//platform-users.css);
+@import url(./last_page/products-b2b.css);
+@import url(./last_page/partners.css);
+@import url(./last_page/use-cases.css);
+@import url(./last_page/involve.css);
+@import url(./last_page/raiting-reviews.css);
+@import url(./last_page/video-section.css);
+@import url(./last_page/last-page-footer.css);
+@import url(./last_page/follow-us.css);
+
 @font-face {
     font-family: 'InterTight';
     src: url('../fonts/InterTight-Bold.woff2') format('woff2');
@@ -48,32 +62,22 @@
   :root {
     --bd-color: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     );
     --color-dark: #000000;
     --color-title: #1F2024;
     --color-primery: #252432;
-    /* title color 1F2024 */
-    /* 252432  main color*/
-    /* text color 000000 */
-    /* --color-dark-gray: #8987a1; */
-    /* --primary-accent: #c4ffd7; */
-    /* --color-blue: #4e47ff; */
-    /* --color-button-hover: rgba(0, 0, 0, 0.2); */
 
-    /* --gradient-collor: linear-gradient( #ADF3EC 0%, #79ECE1 100%); */
 
     --gradient-collor:linear-gradient( rgba(137, 237, 227, 0.5),rgba(0, 176, 159, 0.5));
-    /* --gradient-collor: linear-gradient(90deg,rgba(173, 243, 236, 0.5) 0%, rgba(121, 236, 225, 0.5) 100%); */
-    /* --gradient-collor: linear-gradient(175deg,rgba(137, 237, 227, 0.5) 0%, rgba(0, 176, 159, 0.5) 100%); */
-    /* --gradient-collor: linear-gradient(to bottom,rgba(173, 243, 236, 0.2),rgba(121, 236, 225, 0.2)); */
+   
     
     --border-radius: 40px;
   
     --box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     --font-family-base: "InterTight", sans-serif;
-    /* --font-family-accent: "Inter", sans-serif; */
+  
   
     --container-width: 1300px;
     --container-padding-x: 90px;
@@ -83,8 +87,7 @@
   html, body {
     height: 100%;
     min-height: 100vh;
-    /* margin: 0;
-    padding: 0; */
+ 
   }
 
   body {
@@ -92,72 +95,32 @@
      color: var(--color-primery);
      font-size: 18px;
      font-weight: 400;
-    /*
 
-   
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        /* background: linear-gradient(90deg, #ADF3EC 0%, #79ECE1 100%) 20%,#F5F8FF;
-         background-blend-mode: normal;  */
-
-         /* background: linear-gradient(180deg, rgba(173, 243, 236, 0.2) 0%, rgba(121, 236, 225, 0.2) 100%),#F5F8FF; */
-         /* background: linear-gradient(
-          to bottom,
-          rgba(231, 247, 250, 0.2),
-          rgba(174, 246, 240, 0.2)
-        ); */
-        /* background:linear-gradient(to bottom,rgba(231, 247, 250, 0.2), rgba(174, 246, 240, 0.2)); */
-        
-        /* background-image: linear-gradient(to bottom, #e7f7fa, #d9f7fa, #cbf7f9, #bcf6f5, #aef6f0); */
         background-image: linear-gradient(175deg,rgba(231, 247, 250, 1) 0%, rgba(174, 246, 240, 0.2) 100%);
         background-repeat: no-repeat;
-        background-size: cover; /* або '100% 100%' для жорсткого покриття */
-        background-attachment: fixed; /* необов'язково, але дає ефект "залипання" */
+        background-size: cover; 
+        background-attachment: fixed; 
 
 
-         /* background-color: #d1f0ff9c; */
-         /* background: linear-gradient(to bottom, #E7F7FA, #AEF6F0); */
-         
-         /* border-radius: 0 0 15% 15%; */
-         /* background:linear-gradient(180deg, #ADF3EC 20%, #F5F8FF 100%); */
-          /* background: linear-gradient(
-            120deg, 
-            #31d6a2 10%,
-            #5cd282 20%,
-            #f1ff8b 50%
-          ); */
 
- 
-         /* color: var(--color-dark); */
-         /* */
         
       }
   
-  .body-wrapper {
-    /* padding-bottom: 90px; */
-  }
-  .container--wide {
-    /* max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
 
-    margin-inline: auto;
-    padding-inline: var(--container-padding-x); */
+  .container--wide {
+    
     padding-top: 48px;
   }
   .container--slider {
-    /* max-width: calc(var(--container-width) + var(--container-padding-x) * 2); */
+   
     margin-inline: auto;
-    /* padding-inline: var(--container-padding-x); */
+   
   }
   .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
     padding-inline: var(--container-padding-x);
-    /* max-width: 1121px; */
-    /* padding-inline: 48px; */
-    /* margin: 0 auto; */
+
   }
   .section--margin-bottom {
     margin-bottom: 96px;
@@ -227,8 +190,8 @@
   background: #fff;
 }
 .header__menu-link {
-  /* position: relative; */
-  z-index: 1; /* новий */
+ 
+  z-index: 1; 
 }
 .hero_title-wrapper {
   text-align: center;
@@ -296,11 +259,7 @@
       width: 252px;
       height: 262px;
     }
-    /* .hero_img-scan{
-      bottom: -68px;
-    
-      left: 50%;
-    } */
+
     .hero-container::after {
       right: 49%;
       transform: translateX(50%);
@@ -319,24 +278,20 @@
 
     }
     .hero__image-container::after{
-      /* content: "";
-      display: block;
-      position: absolute; */
+ 
       width: 80px;
       height: 80px;
-      /* border-radius:   0 0 50% 50%; */
+      
       right:  80px;
       bottom: -28px;
-      /* z-index: -1; */
-  
-      /* background: #68D3CC; */
+ 
      
     }
     .hero-container {
       margin-bottom: 90px;
     }
     .hero__image {
-      /* width: 100%; */
+   
       width: 252px;
     }
     .hero-buttons a:last-child{
@@ -361,7 +316,7 @@
   @media (max-width: 1000px) {
     .footer__wrapper{
       padding-top: 250px;
-      /* pad */
+     
     }
 
     .footer__img-wrapper{
@@ -373,7 +328,7 @@
       width: 100%;
     }
     .footer {
-      /* background: linear-gradient(180deg, #4a0072 0%,  #6a0dad 100%); */
+     
     background: linear-gradient(180deg, #5C1E8E 0%,  #5D32F6 100%);
 
       border-radius: 15px;
@@ -381,11 +336,7 @@
     .footer__top {
       margin-bottom: 96px;
     }
-    /* .margin-bottom {
-      margin-bottom: 96px;
-      flex-wrap: wrap;
-      column-gap: 15px;
-    } */
+
     .footer__bootom-wrapper{
       flex-direction: column;
       margin-inline: 0;
@@ -393,13 +344,12 @@
     }
     .footer__social-wrapper {
       flex-direction: row;
-      /* justify-content: space-between; */
+ 
       justify-content: space-around;
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 34px;
-      /* width: 75px;
-      height: 75px; */
+
     }
 
     .footer__scan-wrapper{
@@ -411,23 +361,16 @@
       top:-5%;
       left:37%;
       
-      /* left: 10%; */
-      /* background-position: cover 0px; */
+
     }
     .footer__scan-wrapper:after { 
       content: '';
       position: absolute;
    
-    
-      /* width: 30px; /* або 30px, як ти хочеш */
-     
-    
-    
-
       background-repeat: no-repeat;
       background-size: cover;
       content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path d='M0 0 H40 C35 0, 0 0, 0 40 Z' fill='%235C1E90'/></svg>");
-      /* content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M0 0 H40 C35 0, 0 0, 0 30 Z' fill='%2369D3CB'/></svg>"); */
+     
   
       z-index: -1;
       rotate: 190deg;
@@ -441,17 +384,11 @@
       content: '';
       position: absolute;
    
-    
-      /* width: 30px; /* або 30px, як ти хочеш */
-     
-    
-    
 
       background-repeat: no-repeat;
       background-size: cover;
       content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path d='M0 0 H40 C35 0, 0 0, 0 40 Z' fill='%235C1E90'/></svg>");
-      /* content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M0 0 H40 C35 0, 0 0, 0 30 Z' fill='%2369D3CB'/></svg>"); */
-  
+      
       z-index: -1;
       rotate: -103deg;
       width: 30px;
@@ -465,7 +402,7 @@
     }
     .corner-shape {
       position: absolute;
-      width: 30px;   /* або будь-який розмір */
+      width: 30px;   
       height: 20px;
       top: 4px;
       left: -23px;
@@ -507,9 +444,9 @@
   .step__content {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+   
     justify-content: center;
-    /* align-items: center; */
+    
   }
   .step__description {
     font-size: 16px  ;
@@ -531,11 +468,11 @@
       height: 150px; 
     }
     .users::before{
-      /* top: 50%; */
+   
       left: 10%;
     }
     .users::after {
-      /* top: 55%; */
+   
       left: 90%;
     }
     .reviews__item:last-child{
@@ -543,7 +480,7 @@
     } 
     .remuneration{
       display: block;
-      /* margin-top: 46px; */
+      
     }
 
 
@@ -571,12 +508,12 @@
 
 
     .footer__scan-wrapper{
-      /* top:-5%; */
+      
       left:27%;
     }
     .footer__img-wrapper  {
       max-width: 280px;
-      /* height: auto; */
+     
       width: 100%;
     }
     .footer__top {
@@ -611,12 +548,7 @@
       right: 25px;
     }
 
-    /* .hero-content{ 
-      height: 380px;
-    }
-    .hero__image-container{
-      top: 52%;
-    } */
+
 
     .steps-bonus{
       font-size: 16px;
@@ -632,7 +564,7 @@
       padding-bottom: 15px;
     }
     .footer__scan-wrapper{
-      /* left:18%; */
+   
       left:20%;
 
     }

@@ -1,0 +1,109 @@
+/* 
+.video__list{
+    grid-template-columns: 181px 181px 181px;
+    justify-content: center;
+    column-gap: 8px;
+}
+.video__list .card {
+    background:none;
+    grid: none;
+    padding: 0;
+    margin: 0;
+    box-shadow:none;
+    height: 348px;
+    width: 181px;
+}
+ @media (max-width: 900px) {
+ .video__section .media {
+        width: 181px;
+        height: 348px;
+    }
+    .video__section .what-is-it__title{
+        display: block;
+    }
+    .video__section .card .media {
+        grid-area: none;
+    } 
+ }
+  @media (max-width: 760px) {
+    .margin-bottom-159 {
+        margin-bottom: 56px;
+    }
+    .video__list .card:last-child{
+        display: none;
+    }
+    .video__list{
+        grid-template-columns: 181px 181px;
+    }
+   
+  } */
+   .video__section{
+  --video-w: 180px;
+  --video-h: 348px;
+  --gap: 16px;
+}
+.margin-bottom-159 {
+    margin-bottom: 159px;
+}
+.video__section{
+  /* padding: 20px 16px 32px; */
+  text-align: center;
+   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+/* .video__section h2{
+  margin: 0 0 14px;
+} */
+
+/* Центрована стрічка з переносом */
+.videos__list{
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;              /* ← перенос карток */
+  gap: var(--gap);
+  justify-content: center;      /* ← центр по осі X */
+  align-items: flex-start;
+}
+
+/* Фіксований розмір картки */
+.videos__item{
+  flex: 0 0 var(--video-w);     /* не тягнемо/не стискаємо, рівно 181px */
+  width: var(--video-w);
+  height: var(--video-h);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(2,6,23,.12);
+  background: #eef2f7;
+}
+.videos__item {
+  position: relative;
+}
+/* Зображення повністю заповнює картку */
+.videos__item img{
+  
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* або contain, якщо потрібно без обрізання */
+}
+
+/* Нічого спеціального для мобілки — все вже центрується і переноситься */
+@media (max-width: 760px){
+ .videos__item:last-child{
+    display: none;
+  }
+}
+@media (max-width: 600px){
+  .video__section{ --gap: 8px; }
+ 
+  .margin-bottom-159{
+  margin-bottom: 56px;
+ }
+   .video__section  {
+    
+    padding-inline: 8px;
+ }
+}

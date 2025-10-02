@@ -1,0 +1,201 @@
+/* ===== Modal ===== */
+/* .modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 40;
+}
+.modal[hidden] {
+  display: none;
+}
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.65);
+  backdrop-filter: saturate(120%) blur(2px);
+}
+.modal__dialog {
+  position: relative;
+  width: min(100%, 960px);
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lift);
+  animation: pop 0.16s ease-out;
+}
+@keyframes pop {
+  from {
+    transform: scale(0.96);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal__content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.modal__content iframe,
+.modal__content video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+}
+.modal__close {
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #111827;
+  font-size: 23px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.modal__close:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+} */
+/* =========== */
+.modal{
+  --pad: 24px;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--pad) + env(safe-area-inset-top))
+           calc(var(--pad) + env(safe-area-inset-right))
+           calc(var(--pad) + env(safe-area-inset-bottom))
+           calc(var(--pad) + env(safe-area-inset-left));
+  z-index: 1000;                
+}
+.modal[hidden]{ display:none; }
+
+.modal__overlay{
+  position:absolute; inset:0;
+  background:rgba(2,6,23,.65);
+  backdrop-filter:saturate(120%) blur(2px);
+   
+}
+
+
+.modal__dialog{
+  position:relative;
+  background:#000;
+  border-radius:16px;
+  box-shadow:var(--shadow-lift);
+  animation:pop .16s ease-out;
+  /* головні обмеження */
+  width: min(960px, calc(100dvw - 2*var(--pad)));
+  max-height: calc(100dvh - 2*var(--pad));
+  aspect-ratio: 16 / 9;
+  /* overflow:hidden; */
+
+    z-index: 1;
+}
+
+/* портрет: зазвичай керує ширина — цього вистачає */
+@media (max-width: 640px){
+  .modal{ --pad: 12px; }         /* трохи менше поля */
+  .modal__dialog{ border-radius:12px; }
+  /* .modal__close { top: 6px; right: 6px; width: 44px; height: 44px; } */
+}
+
+/* ландшафт/низькі екрани: базуємось на висоті */
+@media (orientation: landscape) and (max-height: 600px){
+  .modal__dialog{
+    height: calc(100dvh - 2*var(--pad));
+    width: auto;                 /* ширина рахується з aspect-ratio */
+  }
+}
+
+@keyframes pop{
+  from{ transform:scale(.96); opacity:.6; }
+  to  { transform:scale(1);   opacity:1; }
+}
+
+.modal__content{
+  position:absolute; 
+  inset:0;
+  display:grid; 
+  place-items:center;
+  z-index: 1;   
+}
+.modal__content iframe,
+.modal__content video{
+  width:100%; height:100%;
+  border:0;
+  border-radius:inherit; /* повторює радіус контейнера */
+}
+
+/* ❖ КНОПКА ЗАКРИТТЯ — ВСЕРЕДИНІ КУТА, БЕЗ ВИЛІТІВ */
+.modal__close{
+  position:absolute;
+  display: block;
+  top:-58px; right:0;           
+    /* top: -45px;
+  right: -45px; */
+  width:40px; 
+  height:40px;
+  border-radius:50%;
+  border:0;
+  background:#fff;
+  /* color:#111827;  */
+  color: #640707;
+  font-size:23px; 
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  z-index: 2;
+}
+.modal__close:focus-visible{
+  outline:2px solid #2563eb; outline-offset:2px;
+}
+/* ========================================================= модалка мала */
+/* коли показуємо success-картку */
+.modal--success .modal__dialog{
+  /* невеликий діалог */
+  width: min(380px, calc(100dvw - 2*var(--pad)));
+  max-height: none;
+  aspect-ratio: auto;             /* вимикаємо 16:9 */
+  background: transparent;        /* фон дасть сама картка */
+  box-shadow: none;
+}
+
+.modal--success .modal__close{
+  /* top: 8px;
+  right: 8px; */
+}
+
+/* власне картка успіху */
+.success-card{
+  width: min(350px, calc(100dvw - 2*var(--pad) - 24px));
+  min-height: 235px;
+  border-radius: 18px;
+  padding: 16px;
+  /* background: linear-gradient(135deg,#CDEFE7 0%,#BFE7F3 100%); */
+   background: linear-gradient(rgba(137,237,227,1), rgba(0,176,159,1));
+
+  box-shadow: 0 12px 36px rgba(2,6,23,.20);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.success-card__emoji{ font-size: 56px; line-height: 1; }
+.success-card__title{ margin: 4px 0; font-size: 20px; color:#1f2024; }
+.success-card__text{  margin: 0;     color:#374151; }

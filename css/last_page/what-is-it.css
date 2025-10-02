@@ -1,0 +1,394 @@
+/* body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
+    sans-serif;
+  color: var(--ink);
+  background: radial-gradient(
+      1200px 500px at 50% -200px,
+      #d6e7ff 0%,
+      transparent 60%
+    ),
+    var(--bg);
+} */
+body.no-scroll {
+  overflow: hidden;
+}
+.last-page__title {
+    /* font-size: 22px; */
+    /* margin-bottom: 24px; */
+    /* font-weight: 600; */
+    /* color: var(--color-primery); */
+    /* text-align: center; */
+}
+
+/* .section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 48px 20px 0;
+} */
+.what-is-it__title {
+  /* font-size: clamp(22px, 2.6vw, 34px);
+  text-align: center; */
+  /* margin: 0 0 28px; */
+  /* margin-bottom: 24px; */
+  
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 549px 549px; */
+
+  gap: 24px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 181px 1fr;
+  gap: 24px;
+  height: 360px;
+  /* background: var(--card-bg); */
+  border-radius: 16px;
+  box-shadow:var(--box-shadow);
+  padding: 6px;
+  /* align-items: start; */
+    align-items: stretch; 
+     background: #fff;    
+}
+
+.media{
+  position:relative;
+  overflow:hidden;
+  border-radius: 10px;
+  height:100%;
+  /* важливо: без transform тут */
+}
+
+/* усе, що всередині, масштабуємо */
+.media__inner{
+  position:absolute; 
+  inset:0;
+  will-change: transform;
+  transform: translateZ(0) scale(1);     /* стабільна стартова матриця */
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* ефект “піднятості” можна дати тінню або невеликим translateY,
+   але вже на ВНУТРІШНЬОМУ шарі */
+.media:hover .media__inner{
+  transform: translateZ(0) scale(1.02);  /* без translateY — жодних стрибків */
+  box-shadow: var(--shadow-lift);
+  cursor: pointer;
+}
+
+/* (за бажанням) якщо хочеш невелике зміщення вгору — роби його теж тут */
+ /* .media:hover .media__inner{ transform: translateY(-2px) scale(1.02); } */
+
+/* картинка заповнює контейнер */
+.media picture, 
+.media img{
+  width:100%; 
+  height:100%; 
+  display:block;
+}
+.media img{ 
+    /* object-fit:cover;  */
+    object-fit: contain;
+}
+.logo-mask{
+  /* --logo-color:#ffffff; */
+  position:absolute; 
+  top:10px; 
+  right:8px;
+  width:70px; 
+  height:29px;          /* підбери під свій viewBox */
+  /* /* background: var(--logo-color);   */
+  -webkit-mask: url("../../img/logo-mini.svg") no-repeat center / contain;
+          mask: url("../../img/logo-mini.svg") no-repeat center / contain;
+  pointer-events:none;
+}
+.mini-logo1 {
+    background: #868585;
+}
+.mini-logo2 {
+    background: #ffffff;
+}
+.media:hover .logo-mask{ --logo-color:#8e928f; }
+
+/* .get-logo__mini-img {
+    width: 70px;
+    height: 29px;
+    fill: #000;
+      position:absolute; top:10px; right:10px;
+  width:86px; height:auto;
+  color:#ffffff;               
+  opacity:.95; pointer-events:none;
+}
+.logo__svg [fill]{ fill: currentColor; }
+.logo__svg [stroke]{ stroke: currentColor; } */
+/* кнопка play по центру, анімуємо лише іконку */
+.play{
+  position:absolute; inset:0; margin:auto;
+  width:64px; height:64px; display:grid; place-items:center;
+  pointer-events:none;
+}
+.play__icon{
+  width:100%; height:100%; display:block;
+  transform:scale(1); transform-origin:50% 50%;
+  transition:transform .2s ease;
+}
+.media:hover .play__icon{ transform:scale(1.1); }
+.media:active .play__icon{ transform:scale(0.96); }
+
+.card-content__title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 14px;
+  /* margin: 4px 0 8px; */
+}
+
+.card-content__text{
+  color: var(--color-title);
+  line-height: 1.2;
+  font-size: 16px;
+}
+.card p:not(:last-child) {
+margin-bottom: 8px;
+}
+/* Прив'язуємо елементи до грід-областей (діє і для десктопа, і для мобілки) */
+.what-is-it_btn-wrapper {
+  display: none;
+  
+}
+.what-is-it_btn--mobile {
+  display: none;
+}
+@media (max-width: 900px) {
+    .cards{ 
+    grid-template-columns:322px;
+    /* grid-template-columns:1fr; */
+    row-gap: 56px;
+
+    justify-content: center; 
+  }
+.card .media{ grid-area: media; }
+.card .card-content{ grid-area: content; }
+  /* .cards {
+    grid-template-columns: 1fr;
+  } */
+   .what-is-it__title {
+      display: none;
+    }
+    .card-content {
+      text-align: center;
+    }
+    .card-content__text {
+      display: none;
+    }
+    .card-content__text-mobile {
+      display: block;
+      font-size: 18px;
+
+    }
+
+  .card{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "content"
+      "media";       /* контент над картинкою */
+    height: auto;
+    /* max-height: 559px; */
+    background-color: transparent;
+    box-shadow: none;
+    
+    /* justify-content: center;  */
+    /* align-items: center; */
+  }
+  
+    .media{
+    /* :232px; */
+     /* aspect-ratio: 9 / 16;             */
+    /* aspect-ratio:3  / 4; */
+    /* width: 232px; */
+    /* overflow:hidden; */
+
+
+    width: 232px;
+    height: 446px;
+    margin: 0 auto;
+  }
+  .media__inner {
+    /* width: 232px; */
+  }
+    .media img{
+    /* width: 232px; */
+    /* height:auto;                  */
+    /* object-fit:cover; */
+    object-fit:contain;
+
+    /* display:block; */
+  }
+  .what-is-it_btn-wrapper {
+  display:block;
+  /* margin: 0 auto; */
+  text-align: center;
+  margin-top: 24px;
+}
+}
+
+
+@media (max-width: 700px) {
+     /* .card{ height:auto; }
+  .media{ height:auto; aspect-ratio: 3/4; } */
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+/* медіаблок з ефектами ховера/кліку */
+/* .media {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: auto;
+  cursor: pointer;
+  height: 100%;  
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.media:hover {
+
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lift);
+}
+.media:active {
+  transform: scale(0.98);
+}
+.media picture,
+.media img {
+display: block;
+  width: 100%;
+  height: 100%;
+ 
+
+}
+.media img {
+     object-fit: cover;
+    
+}
+
+.media::after {
+  content: "";
+  position: absolute;
+  
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.media:hover::after {
+  opacity: 1;
+}
+.card__logo {
+    position: absolute;
+    display: block;
+    right: 0;
+}
+.play{
+  position:absolute;
+
+   left:50%; top:50%; 
+    transform:translate(-50%,-50%);
+  width: 64px;
+  height: 64px;
+  display:grid;
+ 
+  pointer-events:none; 
+}
+
+
+.play__icon{
+  width:100%;
+  height:100%;
+  display:block;
+  transform:scale(1);            
+  transform-origin:50% 50%;
+
+  transition:transform .2s linear;
+  will-change: transform;
+}
+
+
+.media:hover  .play__icon{ transform:scale(1.1); }
+.media:active .play__icon{ transform:scale(0.96); } */
+/* .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
+  pointer-events: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+} */
+ /* .play{ 
+    position: absolute; 
+    display: block;
+    width:64px; 
+    height:64px; 
+    left:50%; 
+    top:50%; 
+    transform:translate(-50%,-50%); 
+   
+ }
+.play__icon{ 
+    display:block; 
+    width:100%; 
+    height:100%; 
+    margin:auto; 
+}
+.media:hover .play {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.media:active .play {
+  transform: translate(-50%, -50%) scale(0.96); 
+}*/
+/* .play:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 18px solid #111827;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  transform: translateX(4px);
+} */
+/* .play::before{
+  content:"";
+  position:absolute; 
+  inset:0; margin:auto;
+   width:64px; 
+  height:64px;
+    width:100%; 
+  height:100%; 
+  background:url("../../img/play_circle.svg") no-repeat center / contain;
+   border:0;                           
+  transform:none;                      
+} */
+
+/* .stripe {
+  margin-top: 26px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 64px;
+  background: linear-gradient(#fff, #fff) padding-box,
+    repeating-linear-gradient(-45deg, #f0f4ff 0 10px, #e6ecff 10px 20px);
+  border: 1px solid #e6ecff;
+  box-shadow: var(--shadow);
+} */
+
+  @media (max-width: 950px){
+   
+  }
