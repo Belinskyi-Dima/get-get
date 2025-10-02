@@ -74,7 +74,9 @@
   position: fixed;
   inset: 0;
   display: grid;
-  place-items: center;
+  /* place-items: center; */
+  justify-items:center;     /* по X центр */
+  align-items:start;
   padding: calc(var(--pad) + env(safe-area-inset-top))
            calc(var(--pad) + env(safe-area-inset-right))
            calc(var(--pad) + env(safe-area-inset-bottom))
@@ -102,7 +104,9 @@
   max-height: calc(100dvh - 2*var(--pad));
   aspect-ratio: 16 / 9;
   /* overflow:hidden; */
-
+  /* --offset-y: 0;                          
+  transform: translateY(var(--offset-y)); */
+  margin-top: clamp(16px, 10vh, 120px);
     z-index: 1;
 }
 
@@ -125,7 +129,18 @@
   from{ transform:scale(.96); opacity:.6; }
   to  { transform:scale(1);   opacity:1; }
 }
+/* @keyframes pop{
+  from{ transform: translateY(var(--offset-y)) scale(.96); opacity:.6; }
+  to  { transform: translateY(var(--offset-y)) scale(1);   opacity:1; }
+}
+.modal--lift .modal__dialog{
+  --offset-y: -6vh;   
+}
+@media (max-height: 540px){
+  .modal--lift .modal__dialog{ --offset-y: -3vh; }
+} */
 
+/* --- */
 .modal__content{
   position:absolute; 
   inset:0;

@@ -52,25 +52,50 @@
     });
   });
   // Відкрити модалку з відповідним відео
-  function openModal(src){
-    const node = createPlayer(src);
-    content.innerHTML = '';
-    content.appendChild(node);
-    modal.hidden = false;
-    document.body.classList.add('no-scroll');
-    modal.querySelector('.modal__close').focus();
-  }
+  // function openModal(src){
+  //   modal.classList.remove('modal--success');
 
+  //   const node = createPlayer(src);
+  //   content.innerHTML = '';
+  //   content.appendChild(node);
+  //   modal.hidden = false;
+  //   document.body.classList.add('no-scroll');
+  //   modal.querySelector('.modal__close').focus();
+  // }
+function openModal(src){
+  // <<< ВАЖЛИВО: вимикаємо режим success
+  modal.classList.remove('modal--success');
+  const dlg = modal.querySelector('.modal__dialog');
+  dlg.removeAttribute('style');                  // раптом щось ставили інлайном
+  dlg.setAttribute('aria-label', 'Відео');
+
+  content.innerHTML = '';
+  content.appendChild(createPlayer(src));
+  modal.hidden = false;
+  document.body.classList.add('no-scroll');
+  modal.querySelector('.modal__close').focus();
+}
   // Закрити модалку і зупинити відео
+  // function closeModal(){
+  //   const video = content.querySelector('video');
+  //   const iframe = content.querySelector('iframe');
+  //   if(video){ try{ video.pause(); }catch(e){} }
+  //   if(iframe){ iframe.src = 'about:blank'; }
+  //   content.innerHTML = '';
+  //   modal.hidden = true;
+  //   document.body.classList.remove('no-scroll');
+  // }
   function closeModal(){
-    const video = content.querySelector('video');
-    const iframe = content.querySelector('iframe');
-    if(video){ try{ video.pause(); }catch(e){} }
-    if(iframe){ iframe.src = 'about:blank'; }
-    content.innerHTML = '';
-    modal.hidden = true;
-    document.body.classList.remove('no-scroll');
-  }
+  const video = content.querySelector('video');
+  const iframe = content.querySelector('iframe');
+  if (video)  try { video.pause(); } catch(e){}
+  if (iframe) iframe.src = 'about:blank';
+  content.innerHTML = '';
+  modal.classList.remove('modal--success');      // <<< скидаємо стан
+  modal.hidden = true;
+  document.body.classList.remove('no-scroll');
+}
+
 
   // Створення плеєра: mp4 або YouTube
   function createPlayer(url){
@@ -97,7 +122,7 @@ function toYouTubeEmbed(url){
   const short = url.match(/youtu\.be\/([^?&]+)/);
   const long  = url.match(/[?&]v=([^&]+)/);
   const id = short?.[1] || long?.[1] || '';
-  return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : url;
+  return id ? `https://www.youtube.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1` : url;
 }
 // тригер відкриття
 document.querySelectorAll('[data-video]').forEach(el => {
