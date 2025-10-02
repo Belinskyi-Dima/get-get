@@ -27,7 +27,7 @@
 }
 /* .get-for-busines__cards */
  .gfb-card{
-  flex: 1 1 358px;            /* базова ширина 358px, можна звужуватися */
+  flex: 1 1 358px 270px;            /* базова ширина 358px, можна звужуватися */
   max-width:358px;            /* не більше 358px */
   min-height:317px;           /* не менше по висоті */
   box-sizing:border-box;
@@ -109,6 +109,8 @@ margin-bottom: 16px;
   .gfb-card {
      max-width: 350px;
      padding:24px 20px ;
+     /* height: auto; */
+       min-height:274px;  
   }
   .get-for-busines__subtitle{
     font-size: 18px;
