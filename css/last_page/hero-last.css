@@ -208,7 +208,9 @@ html { scroll-behavior: smooth; }
 
    @media (max-width: 1154px){
   .hero-last__image-container {
-    top: 82px;
+    /* top: 82px; */
+    top: 136px;
+
     }
   }
 
@@ -235,7 +237,9 @@ html { scroll-behavior: smooth; }
       padding-top: 0;
     }
     .hero-last__content {
-      margin-top: 280px;
+      /* margin-top: 280px; */
+      margin-top: 300px;
+
     }
     .hero-last__title {
       margin-bottom: 8px;
