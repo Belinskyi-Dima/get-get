@@ -22,7 +22,12 @@
   display:flex;
   flex-wrap:wrap;
   gap:24px;
-  justify-content: space-between;     /* центруємо ряд по горизонталі */
+  /* gap: 10px; */
+  /* column-gap: 10px; */
+  /* row-gap: 24px; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: center;
    margin-inline:auto;        
 }
 /* .get-for-busines__cards */

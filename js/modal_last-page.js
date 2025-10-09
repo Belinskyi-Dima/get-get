@@ -2,6 +2,33 @@
   const content = document.getElementById('modalContent');
   const closeEls = modal.querySelectorAll('[data-close]');
 
+
+// ===== scroll
+function smoothScrollTo(sel){
+  const target = document.querySelector(sel);
+  if (!target) return;
+
+  // шукаємо фіксований хедер (підстав свій селектор за потреби)
+  const header = document.querySelector('.site-header, .header, header.sticky, [data-sticky-header]');
+  const headerH = header ? header.getBoundingClientRect().height : 0;
+  const extra = 12; // трохи повітря
+
+  const y = target.getBoundingClientRect().top + window.pageYOffset - headerH - extra;
+  window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+}
+
+// один слухач на весь документ — працює і для елементів, що з’являються пізніше
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-scroll]');
+  if (!el) return;
+
+  e.preventDefault();
+  const sel = el.getAttribute('data-scroll') || '#involve';
+  smoothScrollTo(sel);
+});
+
+
+
   document.querySelector('.steps-button--form')?.addEventListener('click', (e) => {
   e.preventDefault();
 
