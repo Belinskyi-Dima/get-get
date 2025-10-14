@@ -9,7 +9,7 @@ html { scroll-behavior: smooth; }
   .last-page__title {
     font-weight: 600;
     font-size: 32px;
-    /* font-size: 24px; */
+
     margin-bottom: 24px;
     color: var(--color-primery);
     text-align: center;
@@ -30,13 +30,11 @@ html { scroll-behavior: smooth; }
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    /* margin-bottom: 48px; */
+   
 
     
   }
-  /* .hero-last_section { 
-    margin-top: 96px;
-  } */
+ 
 
   .hero-last__content {
     flex: 1;
@@ -44,12 +42,7 @@ html { scroll-behavior: smooth; }
     max-width: 570px;
   }
   
-  /* .hero__title {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--color-primery);
-  } */
+ 
   .reverse {
     margin-bottom: 24px;
   }
@@ -62,49 +55,7 @@ html { scroll-behavior: smooth; }
      line-height: 1.1;
      
 }
- /* .hero-last__text:not(:last-child){
-    margin-bottom: 24px;
- } */
-  /* .hero__content-list{
-    font-weight: 700;
-    
-  } */
-  /* .hero__content-item {
-  position: relative;
-  padding-left: 30px;
-  line-height: 1.1;
-
-  } */
-  /* .hero__content-item strong {
-    color: #1F2024;
-    
-  } */
-  /* .hero__content-item span {
-    font-weight: 400;
-    
-
-  } */
-  /* .hero__content-item:not(:last-child){
-    margin-bottom: 12px;
-  } */
-
-/*   
-   .hero__content-item::before { 
-   
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -4px;
  
-    display: inline-block; 
-    width: 24px; 
-    height: 24px;
-
-    margin-right: 10px; 
-    background: url("../images/Frame.svg") no-repeat center;
-    background-size: contain; 
-    
-  }  */
   
   .hero-last__image-container {
 
@@ -114,62 +65,14 @@ html { scroll-behavior: smooth; }
     transform: translateY(-50%);
     z-index: 88;
   }
-  /* .hero__image-container::before {
-   
-    position: absolute;
-    
-    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M0 0 H40 C35 0, 0 0, 0 30 Z' fill='%2377D6CE'/></svg>");
-
-    z-index: -1;
-    rotate: 90deg;
-    width: 40px;
-    height: 40px;
-    left: 80px;
-    bottom: 40px; 
-
-  }
-  .hero__image-container::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius:   0 0 50% 50%;
-    right:  143px;
-    bottom: 4px;
-    z-index: -1;
-
-   
-    background: #77D6CE;
-   
-  }
-
-
-
-
-   .hero_img-scan {
-
-    position: absolute;
-    bottom: 12px;
-    left: 45%;
-    transform: translateX(-50%);
-    width: 86px;
-    height: 86px;
-   
-  }  */
+  
 
   .hero__image{
     max-width: 100%;
     height: auto;
   }
   
-  /* .hero-buttons {
-    display: flex;
-    justify-content: left;
-    margin-left: 72px;
-    gap: 16px;
-   
-  } */
+
 
 
   .download-btn {
@@ -208,7 +111,7 @@ html { scroll-behavior: smooth; }
 
    @media (max-width: 1154px){
   .hero-last__image-container {
-    /* top: 82px; */
+ 
     top: 136px;
 
     }
@@ -216,19 +119,17 @@ html { scroll-behavior: smooth; }
 
      @media (max-width: 950px){
   .hero-last__image-container {
-    /* /* top: 0; */
-   /*   */
-    /* position: absolute; */
+
     left: auto;
     right: auto;
-    /* transform: translateY(0); */
+   
     }
     .hero-last__container{
-      /* flex-direction: row-reverse; */
+     
       flex-direction: column;
       background: none;
       padding: 0;
-      /* padding-bottom: 24px; */
+   
       
     }
     
@@ -237,16 +138,14 @@ html { scroll-behavior: smooth; }
       padding-top: 0;
     }
     .hero-last__content {
-      /* margin-top: 280px; */
+    
       margin-top: 300px;
 
     }
     .hero-last__title {
       margin-bottom: 8px;
     }
-    /* .hero_text-mobile {
-      display: block;
-    } */
+
      .reverse {
       display: flex;
       flex-direction: column;
@@ -260,7 +159,7 @@ html { scroll-behavior: smooth; }
         }
         .last-page__title {
           font-size: 24px;
-          /* font-size: 32px; */
+          
         }
-         /* last-page__title  */
+         
       }

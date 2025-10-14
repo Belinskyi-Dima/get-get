@@ -3,38 +3,21 @@
  font-size: 22px;
  margin-bottom: 24px;
 }
-/* grid */
-/* .get-for-busines__cards{
-  display: grid;
-  gap: 24px;
 
-  grid-template-columns: repeat(3, 358px);
-
-}
-@media (max-width: 960px){
-  .get-for-busines__cards{ grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 640px){
-  .get-for-busines__cards{ grid-template-columns: 1fr; }
-} */
 
 .get-for-busines__cards{
   display:flex;
   flex-wrap:wrap;
   gap:24px;
-  /* gap: 10px; */
-  /* column-gap: 10px; */
-  /* row-gap: 24px; */
-  /* justify-content: space-between; */
-  /* justify-content: space-around; */
+
   justify-content: center;
    margin-inline:auto;        
 }
-/* .get-for-busines__cards */
+
  .gfb-card{
-  flex: 1 1 358px 270px;            /* базова ширина 358px, можна звужуватися */
-  max-width:358px;            /* не більше 358px */
-  min-height:317px;           /* не менше по висоті */
+  flex: 1 1 358px 270px;           
+  max-width:358px;           
+  min-height:317px;           
   box-sizing:border-box;
 }
 /* card */
@@ -43,20 +26,12 @@
   border-radius: 16px;
   box-shadow:var(--box-shadow);
   padding:24px 23px ;
-  /* display:grid; */
-  /* grid-template-rows: auto auto auto 1fr; */
-  /* gap:10px; */
+
   text-align: center;
-  /* margin: 0 auto; */
+ 
 }
 .gfb-card__icon{
-  /* width: 146px;; 
-  height:64px; */
-  /* border-radius:14px; */
-  /* background:#ecf3ff; */
-  /* text-align: center; */
-  /* display:grid;  */
-  /* place-items:center; */
+
   display: block;
   margin:0 auto;
   font-size: 28px;
@@ -68,9 +43,6 @@
 display:inline-block;
   align-self:start;
     padding: 6px 5px;
-  /* padding:6px 10px; */
-  
-  /* color:var(--gfb-badge-text); */
 
   border-radius: 4px;
   font-size: 20px;
@@ -86,7 +58,7 @@ display:inline-block;
 }
 .gfb-badge__title {
     font-weight:700;
-/* margin-bottom: 10px; */
+
 }
 .gfb-card__title{
   font-size: 20px;
@@ -96,12 +68,12 @@ display:inline-block;
   margin-bottom: 12px;
 }
 .gfb-badge__text {
-/* background-color: #B2F6F1 */
+
 background-color: rgba(178, 246, 241, 0.5);
 margin-bottom: 16px;
 }
 .gfb-card__text{
-  /* color:; */
+
   font-size: 16px;
   margin:0;
   line-height:1.45;
@@ -114,7 +86,7 @@ margin-bottom: 16px;
   .gfb-card {
      max-width: 350px;
      padding:24px 20px ;
-     /* height: auto; */
+   
        min-height:274px;  
   }
   .get-for-busines__subtitle{

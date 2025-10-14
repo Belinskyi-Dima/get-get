@@ -17,7 +17,7 @@ function smoothScrollTo(sel){
   window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
 }
 
-// один слухач на весь документ — працює і для елементів, що з’являються пізніше
+
 document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-scroll]');
   if (!el) return;
@@ -32,7 +32,7 @@ document.addEventListener('click', (e) => {
   document.querySelector('.steps-button--form')?.addEventListener('click', (e) => {
   e.preventDefault();
 
-  openSuccess();          // підміняє контент модалки на картку-повідомлення
+  openSuccess();          
 });
   function openSuccess(){
     modal.classList.add('modal--success');
@@ -78,17 +78,7 @@ document.addEventListener('click', (e) => {
       el.value = v;
     });
   });
-  // Відкрити модалку з відповідним відео
-  // function openModal(src){
-  //   modal.classList.remove('modal--success');
 
-  //   const node = createPlayer(src);
-  //   content.innerHTML = '';
-  //   content.appendChild(node);
-  //   modal.hidden = false;
-  //   document.body.classList.add('no-scroll');
-  //   modal.querySelector('.modal__close').focus();
-  // }
 function openModal(src){
   // <<< ВАЖЛИВО: вимикаємо режим success
   modal.classList.remove('modal--success');
@@ -102,16 +92,7 @@ function openModal(src){
   document.body.classList.add('no-scroll');
   modal.querySelector('.modal__close').focus();
 }
-  // Закрити модалку і зупинити відео
-  // function closeModal(){
-  //   const video = content.querySelector('video');
-  //   const iframe = content.querySelector('iframe');
-  //   if(video){ try{ video.pause(); }catch(e){} }
-  //   if(iframe){ iframe.src = 'about:blank'; }
-  //   content.innerHTML = '';
-  //   modal.hidden = true;
-  //   document.body.classList.remove('no-scroll');
-  // }
+ 
   function closeModal(){
   const video = content.querySelector('video');
   const iframe = content.querySelector('iframe');
@@ -167,21 +148,3 @@ document.addEventListener('keydown', e => {
   if (!modal.hidden && e.key === 'Escape') closeModal();
 });
 
-  // // Слухачі для картинок
-  // document.querySelectorAll('.media__play--js').forEach(el=>{
-  //   const src = el.getAttribute('data-video');
-  //   const open = ()=> src && openModal(src);
-  //   el.addEventListener('click', open);
-  //   el.addEventListener('keydown', (e)=>{
-  //     if(e.key === 'Enter' || e.key === ' '){
-  //       e.preventDefault(); open();
-  //     }
-  //   });
-  // });
-
-  // // Закриття по overlay/кнопці
-  // closeEls.forEach(btn=>btn.addEventListener('click', closeModal));
-  // // ESC
-  // document.addEventListener('keydown', e => {
-  //   if(!modal.hidden && e.key === 'Escape') closeModal();
-  // });

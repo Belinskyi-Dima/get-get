@@ -1,0 +1,6 @@
+last Page:
+
+розмітка сторінки  => index.html
+Всі стилі в папці => css/last_page/
+Картинки в =>  img/
+Скрипти в => js/modal_last-page.js
